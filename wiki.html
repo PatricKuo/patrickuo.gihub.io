@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>CrazePony Nano-copter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-inverse navbar-static-top" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/wiki.html" class="navbar-brand">Craze维基百科</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="/wiki.html">主页</a>
+        </li>
+        <li>
+          <a href="/wiki-pov.html">CrazePOV</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/index.html" >返回Crazepony主站</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    
+<div class="wiki container">
+          <div class="jumbotron">
+    <p class="lead">这里是CrazePony的维基百科。我们提供DIY一个属于你自己四轴飞行器的文档，也提供对CrazePony四轴飞行器进行二次开发的指导。 </p>
+</div>
+
+<ul>
+  <li><a href="wiki/assemble-guide.html">散件组装教程</a></li>
+  <li><a href="wiki/user-guide.html">入手试飞教程</a></li>
+  <li><a href="wiki/assemble-guide-4-1.html">散件组装教程–4.1版本</a></li>
+  <li><a href="wiki/user-guide-4-1.html">入手试飞教程–4.1版本</a></li>
+</ul>
+
+<h2>开发指南</h2>
+<ul>
+  <li><a href="wiki/setup-environment-in-windows-none.html">windows下开发环境搭建—裸机版本</a></li>
+  <li><a href="wiki/setup-environment-in-windows.html">windows下开发环境搭建—FreeRTOS版本</a></li>
+  <li><a href="wiki/setup-environment-in-linux.html">linux下开发环境搭建</a></li>
+  <li><a href="wiki/crazepony-android-client.html">Crazepony Android客户端</a></li>
+  <li><a href="wiki/flash-firmware.html">固件烧写</a></li>
+</ul>
+
+<h2>Crazepony原理讲解</h2>
+<ul>
+  <li><a href="wiki/ic-readme.html">Crazepony器件选型总览及说明</a></li>
+  <li><a href="wiki/hardware-base.html">Crazepony硬件原理讲解</a></li>
+  <li><a href="wiki/software-base.html">Crazepony软件框架讲解</a></li>
+  <li><a href="wiki/software-experience.html">Crazepony软件开发经验总结</a></li>
+</ul>
+
+<h2>四轴飞行器算法讲解</h2>
+<p>姿态解算是指把陀螺仪、加速度计、罗盘等数据融合在一起，得出飞行器的空中姿态，也叫做姿态融合。姿态解算的过程，涉及到传感器数据读取与滤波，四元数与旋转，姿态解算框架，长期融合/快速融合。</p>
+<ul>
+  <li><a href="wiki/attitude-algorithm.html">姿态解算简介</a></li>
+  <li><a href="wiki/attitude-math.html">姿态的数学表示方法</a></li>
+  <li><a href="wiki/attitude-measure.html">姿态的测量</a></li>
+  <li><a href="wiki/attitude-algorithm-flow-graph.html">姿态解算流程</a></li>
+  <li><a href="wiki/software-algorithm.html">软件姿态解算</a></li>
+  <li><a href="wiki/hardware-algorithm.html">硬件姿态解算</a></li>
+  <li><a href="wiki/quaternions.html">四元数</a></li>
+  <li><a href="wiki/mpu6050.html">三轴陀螺仪和三轴加速度计MPU6050</a></li>
+  <li><a href="wiki/algorithm-pid.html">PID算法</a></li>
+</ul>
+
+<h2>四轴飞行器</h2>
+<p>开源硬件，创客是Crazepony成长的土壤。Crazepony也愿意更加积极的参与到创客活动中，给大家带来乐趣。</p>
+
+<ul>
+  <li><a href="wiki/quadcopter-history.html">四轴飞行器历史回顾</a></li>
+  <li><a href="wiki/opensource-quadcopter.html">开源四轴飞行器</a></li>
+  <li><a href="wiki/quadcopter-star.html">四轴飞行器明星产品</a></li>
+</ul>
+
+<h2>航模基本概念扫盲</h2>
+<p>四轴飞行器有其特有的力学结构，这部分是四轴结构的基本知识和组装。</p>
+<ul>
+  <li><a href="wiki/copter-terminology.html">航模常用术语</a></li>
+  <li><a href="wiki/large-small-quadcopter.html">大四轴 VS 小四轴</a></li>
+  <li><a href="wiki/pitch-yaw-roll.html">三维中pitch，yaw，roll的区别</a></li>
+  <li><a href="wiki/quadcopter-aerodynamic.html">四轴飞行器的空气动力原理</a></li>
+</ul>
+
+<h2>四轴飞行器基本组成部分</h2>
+<ul>
+  <li><a href="wiki/motor-aircraft-model.html">航模电机</a></li>
+  <li><a href="wiki/motor-control-ic.html">电机驱动控制</a></li>
+  <li><a href="wiki/propeller.html">航模桨叶</a></li>
+  <li><a href="wiki/main-controller-mcu.html">飞行控制器-主控MCU</a></li>
+  <li><a href="wiki/main-controller-sensor.html">飞行控制器——传感器</a></li>
+  <li><a href="wiki/remote-controller-2-4.html">航模遥控器</a></li>
+  <li><a href="wiki/remote-controller-bt.html">遥控器——蓝牙通信</a></li>
+</ul>
+
+<h2>Crazyflie</h2>
+<p>Crazyflie使用了实时嵌入式操作系统FreeRTOS。相比于uCOS，FreeRTOS是完全开源免费的，而uCOS在商业上的应用是要收费的。作为一个轻量级的操作系统，功能包括：任务管理、时间管理、信号量、消息队列、内存管理、记录功能等，可基本满足较小系统的需要。下面介绍FreeRTOS的基本框架，在STM32上的移植等。</p>
+<ul>
+  <li><a href="wiki/freertos-intro.html">FreeRTOS简介</a></li>
+  <li><a href="wiki/macro-controls.html">介绍几个常用的宏的作用</a></li>
+  <li><a href="wiki/system-flow-graph.html">固件系统流程框架</a></li>
+  <li><a href="wiki/comm-protocol.html">通信协议</a></li>
+</ul>
+
+<h2>其他</h2>
+<ul>
+  <li><a href="wiki/crazepony-construct.html">Crazepony的板型及结构</a></li>
+  <li><a href="wiki/source-setting.html">源代码的文件编码和文件格式</a></li>
+  <li><a href="wiki/wiki-help.html">如何参与站点建设</a></li>
+  <li><a href="wiki/jekyll-intro.html">jekyll的安装和使用</a></li>
+  <li><a href="wiki/windows-git-intro.html">windows下github配置</a></li>
+</ul>
+
+</div>
+
+<div class="container" id="cc">
+     <p>
+     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a>
+     全部内容以 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons 署名-非商业性使用-相同方式共享 3.0 协议发布</a>.</p>
+</div>
+
+<div class="container text-right">
+    <a href="/wiki.html" class="btn btn-primary" role="button">返回</a>
+    <a class="scrolltop btn btn-default" role="button">回到顶部</a>
+</div>
+
+
+      <!-- FOOTER -->
+    <footer class="bs-docs-footer" role="contentinfo">
+        <p>Copyright &copy;2013 Shenzhen CrazePony Technologies Co., Ltd. All rights reserved.</p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/js/doc.js"></script>
+  </body>
+</html>

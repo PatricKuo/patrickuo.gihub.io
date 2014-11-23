@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>CrazePony Nano-copter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-inverse navbar-static-top" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/wiki.html" class="navbar-brand">Craze维基百科</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="/wiki.html">主页</a>
+        </li>
+        <li>
+          <a href="/wiki-pov.html">CrazePOV</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/index.html" >返回Crazepony主站</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    
+<div class="wiki container">
+          <blockquote>
+  <p>本教程适合Crazepony-II 5.0版本</p>
+</blockquote>
+
+<p>Crazepony提供散件以供有电子设计基础或者动手能力强的伙伴自行组装调试。这是组装调试教程。</p>
+
+<h2 id="section">散件物料列表</h2>
+
+<ul>
+  <li>Crazepony主控电路板（1块，PCBA）</li>
+  <li>720空心杯无刷电机（6个）</li>
+  <li>75cm正反桨叶（各2只）</li>
+  <li>无刷电机套（4只）</li>
+  <li>Crazepony遥控器主控板（1块，PCBA）</li>
+  <li>380mAh航模电池（1块）</li>
+  <li>摇杆帽（2个）</li>
+  <li>遥控器用2.4G无线模块（1个）</li>
+  <li>蓝牙透传模块HM-06（1个）</li>
+  <li>Micro USB数据线（1根）</li>
+</ul>
+
+<blockquote>
+  <p>PCBA是英文Printed Circuit Board（PCB）+ Assembly的简称，也就是说PCB空板经过SMT贴片上件，再经过DIP插件，最后得到的元器件已经贴好的电路板，简称PCBA。</p>
+</blockquote>
+
+<p>下图为散件包含的所有物料。</p>
+
+<p><img src="/assets/img/assemble-6.jpg" alt="" /></p>
+
+<p>自己需要备有电烙铁，502胶水，剪刀（或者小刀）等工具，需要有一定的DIY能力。</p>
+
+<h2 id="section-1">电子软件部分测试</h2>
+<p>Crazepony主控电路板/遥控器电路板已经烧入了最新版本的代码，并且进行了测试。用户拿到之后可以通过以下方式对其基本功能进行测试，确保正确。</p>
+
+<p>todo</p>
+
+<h2 id="pcb">pcb上多余部分如何去掉</h2>
+<p>在散件中飞控PCB上有多余的部分，直接掰下来。多余部分在PCB的制造生产中叫做工艺边，用于SMT贴片时候定位。</p>
+
+<h2 id="section-2">电机安装</h2>
+<p>将电机插入电机套内，电机供电线从电机套底部留出。注意电机一定要完全插入底部，不要留有空隙。否者，电机套保护电机底部免受挫穿的作用就没有了。</p>
+
+<p><img src="/assets/img/assemble-5-0-1.jpg" alt="" /></p>
+
+<p>将电机供电线扭转成麻花状，留足到电机焊盘长度，剪去多余部分，最后将电机线焊接到焊盘上。电机的焊接，对应原则是，<strong>将黑线焊接到标示有+的焊盘，白线焊接到另外一个焊盘。</strong></p>
+
+<p>将电机露出电机套部分插入飞控电路板的电机孔中。这次的电机孔刚好能够卡住整个电机，原则上是无需用502胶水粘合固定的。</p>
+
+<p><img src="/assets/img/assemble-5-0-2.jpg" alt="" /></p>
+
+<p>除了使用502胶水来固定电机，还可以使用螺丝。这是一位伙伴的原话“一开始我用502固定的 换马达弄了好久才拆下来，后来我用螺丝固定的马达套。螺丝也是从旧磁带上拆的，直接拧上去就行。”我们将会测试这种固定方式，如果可行将会在下一版本中进行改进。也欢迎大家提出自己的建议。</p>
+
+<p><img src="/assets/img/assemble-7.jpg" alt="" /></p>
+
+<p><img src="/assets/img/assemble-8.jpg" alt="" /></p>
+
+<p>如果条件允许，将电机套底部开一个缺口，将电机线从这个缺口引出，然后使用热熔胶将其固定，注意要磨平。这样在多次起降撞击的时候，不会伤到电机供电线。（如果条件不允许，也无碍）</p>
+
+<p><img src="/assets/img/assemble-3.jpg" alt="" /></p>
+
+<p>到现在，整个电机的安装就完成了。</p>
+
+<h2 id="section-3">电池的安装</h2>
+<p>将电池焊接到飞控板上，注意电线留出合适的长度，一般是固定在飞控板的下面，所以线是焊接到下面的。电池的红色接飞控板的3.7v焊盘，黑色接GND焊盘。在电池上，我们已经沾上了双面胶，将胶纸的保护膜撕掉，将电池固定于飞控板正中央。</p>
+
+<p><img src="/assets/img/assemble-10.jpg" alt="" /></p>
+
+<p>最近发现有小伙伴尽然将电池放到了PCB的上面，而且用绳子固定的（其实上面已经沾了双面胶）。这让我久久不能平静，确实是我们文档说得不够详细。PCB的上面有基本上所有的元器件，容易造成短路，而且可能遮盖了天线，导致遥控的距离缩短。下面就是几个详细的电池固定示意图。<strong>最好是固定到PCB的下面。</strong></p>
+
+<p>将双面胶撕开，准备粘贴。</p>
+
+<p><img src="/assets/img/assemble-12.jpg" alt="" /></p>
+
+<p>将电池按照如图所示的方位粘贴到PCB的底侧，并且压紧。</p>
+
+<p><img src="/assets/img/assemble-13.jpg" alt="" /></p>
+
+<p>最后效果图。</p>
+
+<p><img src="/assets/img/assemble-11.jpg" alt="" /></p>
+
+<h2 id="section-4">摇杆的安装</h2>
+<p>提供了两个摇杆需要自己安装。两个摇杆是有区别的。其中一个在上下方向上是固定的，左右方向上可以自动复位，我们称之为<strong>油门摇杆</strong>；另外一个在上下左右方向上都能够自动复位，我们称之为<strong>方向摇杆</strong>。</p>
+
+<p>遥控器默认烧入了左手油门的固件，所以要将油门摇杆安装到左边，方向摇杆安装到右手边。当然，如果你需要使用右手油门操作，那么需要重新烧写遥控器固件（我们有提供），并且将油门摇杆和方向摇杆对换。</p>
+
+<p>下面部分，则和购买了整机的操作相同，参考<a href="./user-guide.html">《入手试飞教程》</a>。</p>
+
+</div>
+
+<div class="container" id="cc">
+     <p>
+     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a>
+     全部内容以 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons 署名-非商业性使用-相同方式共享 3.0 协议发布</a>.</p>
+</div>
+
+<div class="container text-right">
+    <a href="/wiki.html" class="btn btn-primary" role="button">返回</a>
+    <a class="scrolltop btn btn-default" role="button">回到顶部</a>
+</div>
+
+
+      <!-- FOOTER -->
+    <footer class="bs-docs-footer" role="contentinfo">
+        <p>Copyright &copy;2013 Shenzhen CrazePony Technologies Co., Ltd. All rights reserved.</p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/js/doc.js"></script>
+  </body>
+</html>

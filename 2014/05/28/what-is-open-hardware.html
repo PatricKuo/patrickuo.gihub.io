@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+    * Author:         BeiYuu
+    -->
+    <meta charset="utf-8" />
+    <title>Crazepony博客</title>
+    <meta name="author" content="crazepony" />
+    <meta name="renderer" content="webkit">
+    <meta name="description" content="Crazepony博客" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/blog-default.css" type="text/css" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="" />
+    <script src="/assets/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+
+    <link href="/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-fixed-top navbar-inverse navbar-static-top" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/blog.html" class="navbar-brand">Crazepony 博客</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="/blog.html">主页</a>
+        </li>
+        <li>
+          <a href="/blog-archive.html">归档</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/index.html" >返回Crazepony主站</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <div class="home-menu">
+        <div class="home-icon-con">
+        </div>
+        <div class="home-contact">
+            <a href="http://weibo.com/beiyuu/" target="_blank" style="margin-left:-5px;"><img src="http://www.weibo.com/favicon.ico" alt="" width="25"/></a>
+            <a href="http://www.douban.com/people/beiyuu/" target="_blank" style="text-align:center;"><img src="http://www.douban.com/favicon.ico" alt="" width="22"/></a>
+            <a href="http://instagram.com/beiyuu/" target="_blank" style="text-align:right"><img src="http://d36xtkk24g8jdx.cloudfront.net/bluebar/00c6602/images/ico/favicon.ico" alt="" width="22"/></a>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="/assets/js/prettify/prettify.css" />
+<style type="text/css">
+    body { background:#e8e8e8; }
+    @media screen and (max-width: 750px){
+        body { background:#fff; }
+    }
+    @media screen and (max-width: 1020px){
+        body { background:#fff; }
+    }
+</style>
+
+<div id="content">
+    <div class="entry">
+        <h1 class="entry-title"><a href="/2014/05/28/what-is-open-hardware.html" title="什么是开源硬件">什么是开源硬件</a></h1>
+        <p class="entry-date"><i class="fa fa-calendar fa-1x"></i>&nbsp;2014-05-28 &nbsp; &nbsp; &nbsp; &nbsp; <i class="fa fa-user fa-1x"></i>&nbsp;nieyong</p>
+
+        <h1 id="section">什么是开源硬件</h1>
+
+<p><img src="/assets/img/open-hardware-1.png" alt="" /></p>
+
+<p>自己一直就比较喜欢折腾开源的东西，例如Linux系统。而第一次接触开源硬件，也正好来自一次深圳Linux用户组（szlug）的聚会，来自其中一位成员关于3d打印机分享。后来在这个聚会中，还见到了makeblock的初始模型。</p>
+
+<p>上面的事情发生在2010年底，那是快4年以前的事情。这些年来，开源硬件的发展也从原来的边缘小众逐步被更多人认识了解，并且催生了很多充满活力和前景的商业公司。那么什么时开源硬件呢？我想，开源硬件其实就是平台开发板，硬件功能模块，可以供工程师去学习，扩展，并且提供了更低的使用门槛，更友好的开发支持，更丰富的社区交流。</p>
+
+<p>记得在大学的时候，想要买一块学习linux的开发板，需要花费将近一个月的生活费。拿到开发板之后，会给你一个pdf格式的说明书，一堆源代码，剩下的事情就基本上只能够靠自己了。文档和代码的质量，完全看开发板开发者的认真程度；出现了问题，只能够找开发者解决；学习资料有限，各种开发板又不尽相同。基本上就是为了学习而学习，真正的能够坚持下来的不多。这是我在大学经历的情况。最近有学弟想玩linux的开发板，我毫不犹豫的推荐了非常有名的开源平台草莓派和cubie box。有全世界各地的人在玩这个开发板，你遇到的问题基本上别人都遇到过，只需要在社区里寻找/发问就能够找到答案。而且，还有很多人分享了他们基于这个平台的创意，例如智能小车，家庭娱乐服务器。我想，他们现在比我当时要幸福得多，也要有趣得很多。</p>
+
+<p><img src="/assets/img/raspberry-pi.jpg" alt="" /></p>
+
+<p>开源硬件最大的特点，就是开源中分享交流的理念改变了硬件开发，设计，分发的模式。最近公司正好有一个项目和开源笔记本项目发起人Bunnie以及Sean合作，在谈到他们项目在众筹网站<a href="https://www.crowdsupply.com/kosagi/novena-open-laptop">CrawdSupply</a>上的定价时，他们说道，很多时候价值已经是开源这种理念的体现，无论是开源软件，还是开源硬件。</p>
+
+
+
+        <div id="disqus_container">
+            <div style="margin-bottom:20px" class="right">
+            </div>
+            <a href="#" class="comment" onclick="return false;">点击查看评论</a>
+            <div id="disqus_thread"></div>
+        </div>
+    </div>
+
+    <div class="sidenav">
+        <iframe width="100%" height="75" class="share_self"  frameborder="0" scrolling="no" ></iframe>
+    </div>
+
+    <div class="sidenav">
+        <h2>Blog</h2>
+        <ul class="artical-list">
+        
+            <li><a href="/2014/10/28/history-story-2.html">内部资料-Crazepony第二版改进部分</a></li>
+        
+            <li><a href="/2014/10/23/robot-dragonfly.html">扑翼飞行器Robot Dragonfly</a></li>
+        
+            <li><a href="/2014/10/22/powerup-paper-airplane.html">遥控纸飞机Powerup</a></li>
+        
+            <li><a href="/2014/09/19/crazepony-computer-vision.html">CrazePony与计算机视觉</a></li>
+        
+            <li><a href="/2014/09/15/crazepony-issuse-feedback.html">Crazepony四轴飞行器反馈问题修改记</a></li>
+        
+            <li><a href="/2014/08/20/self-balancing-vehicle.html">Crazepony自平衡小车</a></li>
+        
+            <li><a href="/2014/08/01/makeblock-weekend.html">Makeblock创客马拉松比赛纪实</a></li>
+        
+            <li><a href="/2014/07/31/diy-quadcopter.html">DIY四轴飞行器如何入门？</a></li>
+        
+            <li><a href="/2014/07/23/openrov.html">水中智能机器人OpenROV</a></li>
+        
+            <li><a href="/2014/07/22/crazepov-story.html">电子设计中POV的故事</a></li>
+        
+            <li><a href="/2014/07/14/crazepov.html">CrazePOV第二版</a></li>
+        
+            <li><a href="/2014/07/13/three-body.html">何时能再看一遍——三体</a></li>
+        
+            <li><a href="/2014/07/07/story-with-crazepony-3.html">我和Crazepony的那点事儿(3)</a></li>
+        
+            <li><a href="/2014/07/06/adult-science.html">《大人的科学》引起的思考</a></li>
+        
+            <li><a href="/2014/05/29/story-with-crazepony-2.html">我和Crazepony的那点事儿(2)</a></li>
+        
+            <li><a href="/2014/05/28/what-is-open-hardware.html">什么是开源硬件</a></li>
+        
+            <li><a href="/2014/05/20/what-is-maker.html">什么是创客</a></li>
+        
+            <li><a href="/2014/03/05/story-with-crazepony-1.html">我和Crazepony的那点事儿(1)</a></li>
+        
+        </ul>
+
+    </div>
+</div>
+
+<script src="/assets/js/post.js" type="text/javascript"></script>
+
+
+    <!--*********************************************************-->
+    <!--****** 宝贝儿，看见这个时候，删掉下面的统计代码哦~ ******-->
+    <!--************* 再推荐下我的第一篇博客哦~~ ****************-->
+    <!--*********************************************************-->
+
+    <div class="hide">
+        <script type="text/javascript" src="http://js.tongji.linezing.com/3498918/tongji.js"></script>
+        <noscript><a href="http://www.linezing.com"><img src="http://img.tongji.linezing.com/3498918/tongji.gif"/></a></noscript>
+    </div>
+    <script type="text/javascript">
+        $(function(){
+            $('.home-follow').click(function(e){
+                e.preventDefault();
+
+                if($('.home-contact').is(':visible')){
+                    $('.home-contact').slideUp(100);
+                }else{
+                    $('.home-contact').slideDown(100);
+                }
+            });
+        })
+    </script>
+</body>
+</html>

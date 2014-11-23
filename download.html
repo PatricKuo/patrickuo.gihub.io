@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>CrazePony Nano-copter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap-image-gallery.min.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body data-spy="scroll" data-target=".navbar">
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-fixed-top navbar-static-top bs-docs-nav" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../" class="navbar-brand">Crazepony</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li id="home"><a href="../"><span class="glyphicon glyphicon-home"></span></a></li>
+        <li id="index">
+          <a href="index.html">主页</a>
+        </li>
+        <li id="pov">
+          <a href="pov.html">POV</a>
+        </li>
+        <li id="todo">
+          <a href="todo.html">擂台榜</a>
+        </li>
+        <li id="faq">
+          <a href="faq.html">常见问题</a>
+        </li>
+        <li id="download">
+          <a href="download.html">下载中心</a>
+        </li>
+        <li>
+          <a href="wiki.html">百科</a>
+        </li>
+        <li>
+          <a href="blog.html">博客</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="" >En</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="divider-vertical hidden-xs"></li>
+        <li><a href="./index.html" >中文</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+ <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body next"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left prev">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        上一张
+                    </button>
+                    <button type="button" class="btn btn-primary next">
+                        下一张
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   
+
+          <div class="bs-docs-header" id="content">
+  <div class="container">
+    <h2 class="bs-docs-featurette-title">下载中心</h2>
+    <p class="lead">Crazepony项目的源代码和原理图等都是开源分享的。这里我们整理了在学习/研究/二次开发过程中需要用到的代码，资料等。</p>
+  </div>
+</div>
+
+
+<div class="container">
+
+    <h2 id="section">飞控/遥控器源代码</h2>
+
+<p>源代码都托管在<a href="https://github.com/Crazepony/">Github的Crazepony团队</a>下，包括飞控代码，遥控器代码，Android APP源码，PC上位机源码等。</p>
+
+<p>飞控代码托管在<a href="https://github.com/Crazepony/crazepony-firmware-none">crazepony-firmware-none项目</a>下。其中名字中的none表示<strong>没有</strong>使用FreeRTOS，是裸机代码，代码更加简单明了，适合初学者使用。</p>
+
+<p><a href="https://github.com/Crazepony/crazepony-firmware-none" class="btn btn-lg btn-outline" role="button" target="_blank">飞控源码</a>
+<a href="https://github.com/Crazepony/crazepony-remote-none" class="btn btn-lg btn-outline" role="button" target="_blank">遥控器源码</a></p>
+
+<h2 id="section-1">原理图&amp;芯片资料</h2>
+<p>通过百度网盘提供所有版本原理图的下载。并且将所使用芯片的资料（datasheet，封装图等）进行了整理，供大家下载。</p>
+
+<p><a href="http://pan.baidu.com/s/1o6Lo7jW" class="btn btn-lg btn-outline" role="button" target="_blank">原理图（飞控+遥控器）</a>
+<a href="http://pan.baidu.com/s/1i31fUCl" class="btn btn-lg btn-outline" role="button" target="_blank">芯片资料</a></p>
+
+<h2 id="windows">Windows开发安装包</h2>
+<p>裸机版本的代码使用Keil 4进行开发编译。固件的烧写可以使用JLink工具，也可以直接通过micro USB进行烧写。我们整理了开发工具的安装文件，驱动安装文件等，并且共享在百度网盘上提供下载。</p>
+
+<p>
+<a href="http://pan.baidu.com/s/1ntNqLdv" class="btn btn-lg btn-outline" role="button" target="_blank">Keil 4安装文件</a>
+<a href="" class="btn btn-lg btn-outline" role="button" target="_blank">Keil 5安装文件（整理中）</a>
+<a href="http://pan.baidu.com/s/1eQ1kfPw" class="btn btn-lg btn-outline" role="button" target="_blank">固件USB接口烧写工具</a>
+</p>
+
+<h2 id="android">上位机和Android客户端</h2>
+<p><a href="http://pan.baidu.com/s/1q5bEu" class="btn btn-lg btn-outline" role="button" target="_blank">PC上位机安装程序</a>
+<a href="http://pan.baidu.com/s/1pJsMyqJ" class="btn btn-lg btn-outline" role="button" target="_blank">Android APP安装程序（APK文件）</a>
+<a href="https://github.com/Crazepony/crazepony-host-client" class="btn btn-lg btn-outline" role="button" target="_blank">PC上位机源码</a>
+<a href="https://github.com/Crazepony/crazepony-android-client-none" class="btn btn-lg btn-outline" role="button" target="_blank">Android APP源码</a></p>
+
+<p>上位机使用C#写成，现在已经加入了飞行姿态模拟，姿态数据显示，PWM输出显示等功能。截图如下所示。</p>
+
+<p><img src="/assets/img/assistant.jpg" alt="" /></p>
+
+<p>现在Crazepony支持Android手机蓝牙链接，使用手机的体感控制飞行。Android APP截图如下。</p>
+
+<p><img src="/assets/img/android-app.jpg" alt="" /></p>
+
+
+    <div class="page_disqus" id="disqus_container">
+        <a href="#" class="comment" onclick="return false;">我要留言</a>
+        <div id="disqus_thread"></div>
+    </div>
+</div>
+
+
+
+
+      <!-- FOOTER -->
+    <footer class="bs-docs-footer" role="contentinfo">
+        <p>Copyright &copy;2013 Shenzhen CrazePony Technologies Co., Ltd. All rights reserved.</p>
+    </footer>
+
+    <div class="hide">
+        <script type="text/javascript" src="http://js.tongji.linezing.com/3498918/tongji.js"></script>
+        <noscript><a href="http://www.linezing.com"><img src="http://img.tongji.linezing.com/3498918/tongji.gif"/></a></noscript>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://cdn.bootcss.com/holder/2.0/holder.min.js"></script>
+    <script src="/assets/js/doc.js"></script>
+    <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <script src="/assets/js/bootstrap-image-gallery.min.js"></script>
+    <script src="/assets/js/post.js" type="text/javascript"></script>
+  </body>
+</html>

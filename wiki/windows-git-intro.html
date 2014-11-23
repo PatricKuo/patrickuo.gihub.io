@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>CrazePony Nano-copter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-inverse navbar-static-top" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/wiki.html" class="navbar-brand">Craze维基百科</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="/wiki.html">主页</a>
+        </li>
+        <li>
+          <a href="/wiki-pov.html">CrazePOV</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/index.html" >返回Crazepony主站</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    
+<div class="wiki container">
+          <h1 id="windowsgithub">windows下github的配置</h1>
+<p>git for Windows下载地址<a href="http://msysgit.github.io/">http://msysgit.github.io/</a>;</p>
+
+<p>之后我们能看到有GitBash和GitGUI两个程序，打开GitBash</p>
+
+<p>为了生成一个sshkey输入 ssh-keygen -t rsa</p>
+
+<p><img src="/assets/img/ssh-keygen.jpg" alt="" /></p>
+
+<p>去生成路径下可以看到以下两个文件：</p>
+
+<p><img src="/assets/img/id-rsa.jpg" alt="" /></p>
+
+<p>打开id_rsa.pub把里面的内容全部复制出来。</p>
+
+<p>打开GitHub点击右上角的小扳手，在SSHKEY里添加刚才复制的内容。提交就OK!</p>
+
+<p>看到多了一个SSHKEYS。名字可以随便写。。</p>
+
+<p><img src="/assets/img/rsa-github.png" alt="" /></p>
+
+<p>下一步把GitHub上的源码Clone到本地：</p>
+
+<p>输入git clone git@github.com:Crazepony/crazepony.github.io.git</p>
+
+<p>连敲几个回车</p>
+
+<p><img src="/assets/img/git-clone.jpg" alt="" /></p>
+
+<p>内容有点多，耐心等待一会。。。</p>
+
+<p>进入crazepony的目录:cd crazepony.github.io</p>
+
+<p>也可以使用git gui来管理我们的版本库：</p>
+
+<p><img src="/assets/img/git-gui.jpg" alt="" /></p>
+
+</div>
+
+<div class="container" id="cc">
+     <p>
+     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a>
+     全部内容以 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons 署名-非商业性使用-相同方式共享 3.0 协议发布</a>.</p>
+</div>
+
+<div class="container text-right">
+    <a href="/wiki.html" class="btn btn-primary" role="button">返回</a>
+    <a class="scrolltop btn btn-default" role="button">回到顶部</a>
+</div>
+
+
+      <!-- FOOTER -->
+    <footer class="bs-docs-footer" role="contentinfo">
+        <p>Copyright &copy;2013 Shenzhen CrazePony Technologies Co., Ltd. All rights reserved.</p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/js/doc.js"></script>
+  </body>
+</html>

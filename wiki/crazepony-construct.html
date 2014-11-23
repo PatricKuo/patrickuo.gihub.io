@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>CrazePony Nano-copter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-inverse navbar-static-top" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/wiki.html" class="navbar-brand">Craze维基百科</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="/wiki.html">主页</a>
+        </li>
+        <li>
+          <a href="/wiki-pov.html">CrazePOV</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/index.html" >返回Crazepony主站</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    
+<div class="wiki container">
+          <h1 id="crazepony">关于Crazepony的板形及结构</h1>
+
+<h2 id="section">板形</h2>
+<p>目前，市面上的绝大部分的小四轴采用的是直“X”形和直“十”字的结构。但这两种结构有一个缺点，就是机臂的问题。如果机臂做得太宽，毫无疑问会严重影响到整个小四轴的美观性。但是如果不做宽，为了给螺旋桨让出足够的空间，机臂是要伸出小四轴主体一段相对比较长的距离的，这样的话就会造成整个机臂细长，有碰撞或者受力稍大都可能造成机臂断掉（在网上看到不少四轴爱好者就抱怨过这个问题）。</p>
+
+<p><img src="/assets/img/construct-1.jpg" alt="" /></p>
+
+<p><img src="/assets/img/construct-2.jpg" alt="" /></p>
+
+<p>对以上的问题，Crazepony在选板形的过程中，淘汰了直“X”和直“十”字的结构。采用了全新的双曲线结构（注意：机臂与机臂之间并不是半圆），从小四轴主体到机臂末端沿一条曲线变小，这样既保证了机臂的牢固性，又保证了整体的美观。采用双曲线结构之后，整机的流畅性显得淋漓尽致，给人一种柔和圆滑的感觉，与直“十”字的那种呆板简直天差地别。</p>
+
+<p><img src="/assets/img/construct-3.jpg" alt="" /></p>
+
+<p>Crazepony的双曲线结构同时，有别于传统小四轴飞行器PCB板结构的一个地方在于，Crazepony在机臂末端做了一个和电机外径同等大小的圆孔，将电机安装在圆孔内，就相当于将电机栓在了小四轴这个整体上面。这样的方式与市面上绝大多数的小四轴将电机安装在PCB板外的方式相比有一个很明显的好处，就是：避免了电机支架松动，导致电机晃动，从而引起在飞行过程中整体的晃动。</p>
+
+<h2 id="mm">板厚——2.0mm</h2>
+<p>Crazepony前三版采用的都是1.6mm的板厚，在试飞过程中一直觉得有点颤颤巍巍胆战心惊的感觉，但就是没发现原因。直到有一次看到crazyflie的一张侧面图，才发现根本原因在板子的厚度。虽然在试飞的过程中未造成过板子破裂等不良现象，为了保险起见还是采用了2.0mm的四层板（注意：板厚也不是随便可以改的，不同的板厚会对信号传输有影响，具体影响的程度只能去不停地试）。</p>
+
+<p>选择四层板的原因，也是由于对硬件不断的优化选择，减少了元器件的数量，所以在保证整体大小的情况下，元器件都焊接在了PCB板的顶层。由于信号线都放置在了顶层，所以具体的四层结构（从上往下）是：signal_1(Top)，GND(Inner_1)，POWER(Inner_2)，Signal_2(Bottom)，这种结构方式有效的避免了POWER层对TOP层的一些不必要的信号干扰。关于多层电路板设计的问题，大家可以参考<a href="http://wenku.baidu.com/link?url=K-Mgukgsj5VT2kG2Df2nZtQ-r7-bZuBZ5G0BgRD8vDGxKk0ZBNinJnnmgrWfjGP061vNpLbZlJifQogE3vhZcm0F1S6ka4kjryRFimGMAC7">PCB四层电路板教程</a>。</p>
+
+<p><img src="/assets/img/construct-4.jpg" alt="" /></p>
+
+<h2 id="pcb">PCB板工艺</h2>
+<p>Crazepony采用的是黑色PCB板加沉金工艺。选择黑色PCB板的主要原因就是觉得好看！搭配上银色的铅锡焊盘之后又显得有点违和，出于对整体的美观及进一步的工艺要求，Crazepony在第四版的时候，将原来普通的银色铅锡焊盘改为了沉金工艺的金色焊盘。沉金工艺的好处在于以下几点：</p>
+
+<ul>
+  <li>沉金的金黄色配上PCB板的黑色，有木有一种高大上的感觉！！！</li>
+  <li>在焊接时，沉金工艺相对于普通的铅锡焊盘更容易焊接，不易造成焊接不良。</li>
+  <li>沉金晶体结构致密，不易产生氧化。同时表面的平整度与待用寿命较好。</li>
+  <li>沉金板焊盘上只有镍金，线路上的阻焊与铜层的结合更牢固。
+想对沉金工艺进一步了解的朋友可以参考<a href="http://wenku.baidu.com/link?url=wYNR9dDGjbYzkqjUrJP81ggfRUQ9uN5svOQ3frwVMLshIjIOs-mcKathG8T8HG-kVrS7ppmsi1QOmXuDXTEB_8865pvACRjk_Uf7DD3Zyze">PCB沉金工艺介绍</a>。</li>
+</ul>
+
+<p><img src="/assets/img/construct-5.jpg" alt="" /></p>
+
+<p><img src="/assets/img/construct-6.jpg" alt="" /></p>
+
+
+</div>
+
+<div class="container" id="cc">
+     <p>
+     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a>
+     全部内容以 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons 署名-非商业性使用-相同方式共享 3.0 协议发布</a>.</p>
+</div>
+
+<div class="container text-right">
+    <a href="/wiki.html" class="btn btn-primary" role="button">返回</a>
+    <a class="scrolltop btn btn-default" role="button">回到顶部</a>
+</div>
+
+
+      <!-- FOOTER -->
+    <footer class="bs-docs-footer" role="contentinfo">
+        <p>Copyright &copy;2013 Shenzhen CrazePony Technologies Co., Ltd. All rights reserved.</p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/js/doc.js"></script>
+  </body>
+</html>

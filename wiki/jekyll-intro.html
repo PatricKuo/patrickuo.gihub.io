@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>CrazePony Nano-copter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-inverse navbar-static-top" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/wiki.html" class="navbar-brand">Craze维基百科</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="/wiki.html">主页</a>
+        </li>
+        <li>
+          <a href="/wiki-pov.html">CrazePOV</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/index.html" >返回Crazepony主站</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    
+<div class="wiki container">
+          <h1 id="jekyll">Jekyll的安装和使用</h1>
+
+<p>这个站点使用了github提供的jekyll工具生成html静态网页。所以在本地进行调试时，最好在本地安装jekyll工具，模拟在github生成网页的效果。详细可以参考Github Help中的<a href="https://help.github.com/articles/using-jekyll-with-pages">Using Jekyll with Pages</a>。</p>
+
+<h2 id="ubuntujekyll">ubuntu下安装jekyll</h2>
+<p>在ubuntu中使用下面的命令安装jekyll：</p>
+
+<pre><code>//jekyll是用ruby写的，所以需要先安装ruby开发环境
+$ sudo apt-get install ruby
+$ sudo apt-get install ruby-dev
+$ sudo gem install rdoc
+
+//安装jekyll
+$ gem install jekyll
+</code></pre>
+
+<p>在本地调试crazepony网站效果：</p>
+
+<pre><code>//进入站点源码目录，开启jekyll服务
+$ cd crazepony.github.io
+$ jekyll serve
+
+</code></pre>
+
+<p>开启jekyll服务之后，在站点源代码下，会生成一个名为_site的目录，该目录下就是jekyll生成的站点静态网页。并且jekyll在本地开启了一个简单的http服务，在浏览器中输入<code>http://localhost:4000/</code>，就能够看到站点的效果。</p>
+
+<h2 id="windowsjekyll">windows下安装jekyll</h2>
+<p>windows下安装jekyll会遇到很多奇奇怪怪的问题，所以可能没法成功，一定要有耐心。下面是在笔者的windows 7,64位系统上配置成功的过程。</p>
+
+<p>Ruby和Ruby DevKit下载地址<a href="http://rubyinstaller.org/downloads/">http://rubyinstaller.org/downloads/</a>。下载ruby 1.9.3版本以及对应的开发包DevKit，ruby 2.0会遇到很多兼容上的错误，不要使用。</p>
+
+<p><img src="/assets/img/ruby.png" alt="" /></p>
+
+<p><img src="/assets/img/ruby-devkit.png" alt="" /></p>
+
+<ul>
+  <li>安装上面下载的Ruby和Ruby DevKit；</li>
+  <li>打开Ruby DevKit安装目录下的shell，输入下面的命令安装jekyll；</li>
+</ul>
+
+<pre><code>$ cd c:
+$ cd RubyDevKit193 //进入Ruby DevKit的安装目录
+$ ruby dk.rb init
+$ ruby dk.rb install
+$ gem install jekyll
+</code></pre>
+
+<p>Portable Python下载地址<a href="http://portablepython.com/">http://portablepython.com/</a>。下载python 2.7版本并且安装。</p>
+
+<p><img src="/assets/img/python.png" alt="" /></p>
+
+<p>至此，在windows下的终端cmd中应该存在jekyll命令。切换到源码路径下，使用<code>jekyll serve</code>命令就能够开启jekyll的服务，和ubuntu下的使用是一样的。</p>
+
+<h2 id="jekyll-1">jekyll的相关配置</h2>
+
+<p>本站点使用到的jekyll功能或者配置。</p>
+
+<ul>
+  <li><a href="http://jekyllrb.com/docs/templates/#code-snippet-highlighting">jekyll配置代码高亮</a></li>
+  <li><a href="http://jekyllrb.com/docs/templates/#gist">内嵌gist代码</a></li>
+</ul>
+
+<p><a href="http://getpoole.com/">Poople</a>是一个jekyll模板站点，有很不错适合个人博客的模板提供。Crazepony的博客站点使用的<a href="http://beiyuu.com/">BeiYuu</a>的模板，最原始就应该是来自Poople中的Hyde模板。</p>
+
+</div>
+
+<div class="container" id="cc">
+     <p>
+     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a>
+     全部内容以 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons 署名-非商业性使用-相同方式共享 3.0 协议发布</a>.</p>
+</div>
+
+<div class="container text-right">
+    <a href="/wiki.html" class="btn btn-primary" role="button">返回</a>
+    <a class="scrolltop btn btn-default" role="button">回到顶部</a>
+</div>
+
+
+      <!-- FOOTER -->
+    <footer class="bs-docs-footer" role="contentinfo">
+        <p>Copyright &copy;2013 Shenzhen CrazePony Technologies Co., Ltd. All rights reserved.</p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/js/doc.js"></script>
+  </body>
+</html>

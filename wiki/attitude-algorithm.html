@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>CrazePony Nano-copter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-inverse navbar-static-top" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/wiki.html" class="navbar-brand">Craze维基百科</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="/wiki.html">主页</a>
+        </li>
+        <li>
+          <a href="/wiki-pov.html">CrazePOV</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/index.html" >返回Crazepony主站</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    
+<div class="wiki container">
+          <p>姿态解算的英文是attitude algorithm，也叫做姿态分析，姿态估计，姿态融合。姿态解算是指把陀螺仪、加速度计、罗盘等的数据融合在一起，得出飞行器的空中姿态。</p>
+
+<p>飞行器从陀螺仪的三轴角速度通过四元数法得到的俯仰、偏航和滚转角，这是<strong>快速解算</strong>，结合三轴地磁和三轴加速度得到<strong>漂移补偿</strong>和<strong>深度解算</strong>。</p>
+
+<h2 id="section">数学模型</h2>
+<p>姿态是用来描述一个刚体的固连坐标系和参考坐标系之间的角位置关系，有一些数学表示方法。很常见的就是欧拉角，四元数，矩阵，轴角。</p>
+
+<p>姿态解算需要解决的是四轴飞行器和地球的相对姿态问题。地球的坐标系又叫做<strong>地理坐标系</strong>，是固定不变的。正北，正东，正向上构成了这个坐标系的X，Y，Z轴，我们用坐标系R表示。四轴飞行器上固定着一个坐标系，用坐标系r表示。那么我们就可以用欧拉角，四元数等来描述r和R的角位置关系。这就是四轴飞行器姿态解算的数学模型和基础。</p>
+
+<p><img src="/assets/img/earth-coodinate.png" alt="" /></p>
+
+<h2 id="section-1">角位置关系测量</h2>
+<p>如上所说，地球坐标系R是固定的。四轴飞行器上固定一个坐标系r，这个坐标系r在坐标系R中运动。那么如何知道坐标系r和坐标系R的角位置关系呢，也就是怎么知道飞行器相对于地球这个固定坐标系R转动了一下航向，或者侧翻了一下机身，或者掉头下栽。这就是传感器需要测量的数据，传感器包括陀螺仪，加速度计，磁力计。通过获得这些测量数据，得到坐标系r和坐标系R的角位置关系，这就是姿态解算。</p>
+
+</div>
+
+<div class="container" id="cc">
+     <p>
+     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a>
+     全部内容以 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons 署名-非商业性使用-相同方式共享 3.0 协议发布</a>.</p>
+</div>
+
+<div class="container text-right">
+    <a href="/wiki.html" class="btn btn-primary" role="button">返回</a>
+    <a class="scrolltop btn btn-default" role="button">回到顶部</a>
+</div>
+
+
+      <!-- FOOTER -->
+    <footer class="bs-docs-footer" role="contentinfo">
+        <p>Copyright &copy;2013 Shenzhen CrazePony Technologies Co., Ltd. All rights reserved.</p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/js/doc.js"></script>
+  </body>
+</html>

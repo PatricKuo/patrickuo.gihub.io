@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>CrazePony Nano-copter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-inverse navbar-static-top" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/wiki.html" class="navbar-brand">Craze维基百科</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="/wiki.html">主页</a>
+        </li>
+        <li>
+          <a href="/wiki-pov.html">CrazePOV</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/index.html" >返回Crazepony主站</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    
+<div class="wiki container">
+          <h1 id="section">介绍几个常用的宏的作用</h1>
+
+<p>在Crazyflie的固件代码中，宏一般都定义在文件Makefile中。使用<code>CFLAGS += -D</code>的方式添加。</p>
+
+<pre><code># Flag that can be added to config.mk
+CFLAGS += -DUSE_UART_CRTP        # Set CRTP link to UART
+CFLAGS += -DUSE_ESKYLINK         # Set CRTP link to E-SKY receiver
+CFLAGS += -DENABLE_UART          # To enable the uart
+CFLAGS += -DDEBUG_PRINT_ON_UART  # Redirect the console output to the UART
+</code></pre>
+
+<h2 id="enableuart">ENABLE_UART</h2>
+<p>启用串口打印功能。要想调试期间把信息打印到串口，还需要加上宏：DEBUG_PRINT_ON_UART </p>
+
+<h2 id="useuartcrtp">USE_UART_CRTP</h2>
+<p>crtp模块为：Crazy Realtime Transfer Protocol stack，是crazy flie的通信协议栈。通信链路可以2.4G 遥控信息，可以使用USE_ESKYLINK，也可以使用串口。若要使用蓝牙模块作为通信链路，应该开启此宏。</p>
+
+<h2 id="debugprintonuart">DEBUG_PRINT_ON_UART</h2>
+<p>使用串口调试。在平衡算法当中进行调试的时候，串口打印显得尤为重要，通过此宏可以开启串口调试。注意：开启串口调试的时候不能开启宏USE_UART_CRTP，串口作为通信链接。</p>
+
+<h2 id="board2">BOARD_2</h2>
+<p>此宏在drivers/i2c_gpio.c文件中。因为版本2与版本3的i2c部分引脚有区别，去掉此宏定义适用于第三版的硬件</p>
+
+
+</div>
+
+<div class="container" id="cc">
+     <p>
+     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a>
+     全部内容以 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons 署名-非商业性使用-相同方式共享 3.0 协议发布</a>.</p>
+</div>
+
+<div class="container text-right">
+    <a href="/wiki.html" class="btn btn-primary" role="button">返回</a>
+    <a class="scrolltop btn btn-default" role="button">回到顶部</a>
+</div>
+
+
+      <!-- FOOTER -->
+    <footer class="bs-docs-footer" role="contentinfo">
+        <p>Copyright &copy;2013 Shenzhen CrazePony Technologies Co., Ltd. All rights reserved.</p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/js/doc.js"></script>
+  </body>
+</html>

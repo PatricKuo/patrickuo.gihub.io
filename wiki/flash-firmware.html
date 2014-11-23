@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>CrazePony Nano-copter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-inverse navbar-static-top" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/wiki.html" class="navbar-brand">Craze维基百科</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="/wiki.html">主页</a>
+        </li>
+        <li>
+          <a href="/wiki-pov.html">CrazePOV</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/index.html" >返回Crazepony主站</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    
+<div class="wiki container">
+          <h1 id="section">固件烧写</h1>
+
+<p>编译好STM32的代码，得到hex格式的固件文件，如何烧写到主控中？</p>
+
+<p>首先从crazepony的百度云盘中下载开发工具，点击<a href="http://pan.baidu.com/s/1eQ1kfPw">这里</a>。解压压缩文件得到3个文件夹。</p>
+
+<h2 id="cp2102">安装cp2102驱动</h2>
+<p>cp2102是Crazepony上使用的USB转串口芯片。cp2102和STM32芯片以串口相连，和电脑PC以USB接口相连，这是Crazepony能够接上USB线对飞控/遥控器进行固件烧写编程和调试信息打印的原因。</p>
+
+<p>首先要把cp2102的驱动在电脑PC上装好，这样电脑作为Host才能够识别到cp2102。这个驱动在32位windows xp系统/64位 windows 7系统下都测试通过。</p>
+
+<p><img src="/assets/img/cp2102.jpg" alt="" /></p>
+
+<h2 id="hex">烧入hex文件</h2>
+<p>打开下载器，然后用这个下载器下载hex文件。如果无法烧入成功，可以重新插拔一下。</p>
+
+<p><img src="/assets/img/download.jpg" alt="" /></p>
+
+<p>下载成功的标注。</p>
+
+<p><img src="/assets/img/download-done.jpg" alt="" /></p>
+
+<p>对于Crazepony-II 5.0及以后的版本，实现了连续下载固件功能，直接使用cp2102复位STM32并且引导进入串口升级固件的ISP下载模式。所以必须选择左下角的“RTS的高电平复位，DTR高电平进Bootloader”，如下图所示：</p>
+
+<p><img src="/assets/img/download-1.jpg" alt="" /></p>
+
+<h2 id="section-1">查看打印信息</h2>
+
+<p>连上usb线，打开压缩包的里的串口助手，波特率115200，查看调试参数，确认hex烧入成功，并且正常运行。注意选择正确的串口。如果没有信息，可以按下复位键复位飞行器主控（对于5.0版本之后，没有复位按键）。</p>
+
+<p><img src="/assets/img/uart-info.jpg" alt="" /></p>
+
+</div>
+
+<div class="container" id="cc">
+     <p>
+     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a>
+     全部内容以 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons 署名-非商业性使用-相同方式共享 3.0 协议发布</a>.</p>
+</div>
+
+<div class="container text-right">
+    <a href="/wiki.html" class="btn btn-primary" role="button">返回</a>
+    <a class="scrolltop btn btn-default" role="button">回到顶部</a>
+</div>
+
+
+      <!-- FOOTER -->
+    <footer class="bs-docs-footer" role="contentinfo">
+        <p>Copyright &copy;2013 Shenzhen CrazePony Technologies Co., Ltd. All rights reserved.</p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/js/doc.js"></script>
+  </body>
+</html>

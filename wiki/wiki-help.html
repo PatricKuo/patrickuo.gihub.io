@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>CrazePony Nano-copter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-inverse navbar-static-top" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/wiki.html" class="navbar-brand">Craze维基百科</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="/wiki.html">主页</a>
+        </li>
+        <li>
+          <a href="/wiki-pov.html">CrazePOV</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/index.html" >返回Crazepony主站</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    
+<div class="wiki container">
+          <h1 id="section">如何参与站点建设</h1>
+
+<h2 id="crazepony">Crazepony站点</h2>
+<p>Crazepony网站包括了<a href="http://crazepony.github.io/index-cn.html">Crazepony主站</a>，<a href="http://crazepony.github.io/wiki.html">Crazepony Wiki</a>百科站点，<a href="http://crazepony.github.io/blog.html">Crazepony Blog</a>博客站点。</p>
+
+<p>Crazepony网站建设和部署使用了多种开源的技术和平台。</p>
+
+<ul>
+  <li>站点部署在github上，使用了github page网站服务器功能，并且整个站点框架使用<a href="http://jekyllrb.com/">jekyll</a>，这是github page支持的静态网站框架。</li>
+  <li>前端框架使用<a href="https://github.com/twbs/bootstrap">bootstrap</a>开源项目</li>
+  <li>百科站点和博客站点内容全部使用markdown标志语言编辑。</li>
+</ul>
+
+<p>markdown文本解析库使用了<a href="http://kramdown.gettalong.org/">kramdown</a>，该库支持的语法是markdown的一个超集，和标准markdown语法有最小的区别。<a href="http://kramdown.gettalong.org/quickref.html">quick reference</a>提供了kramdown的快速入门，也可以从<a href="http://kramdown.gettalong.org/syntax.html">syntax page</a>看到对kramdown支持的markdown语法一个更加详细的说明。kramdown和markdown最大的一个语法不同点，就是对代码段的注释不一样，导致原来很多地方需要修改。</p>
+
+<blockquote>
+  <p>markdown的code段注释为```，而kramdown的code段注释为~~~</p>
+</blockquote>
+
+<h2 id="crazepony-1">Crazepony站点源码结构</h2>
+<p>Crazepony站点源代码托管在github上，点击<a href="https://github.com/Crazepony/crazepony.github.io">这里</a>。由于本站点使用了jekyll框架，所以其结构基本上符合jekyll框架结构。</p>
+
+<pre><code>├── assets              |网页相关的资源文件夹，例如图片，定制css，javascript文件等
+├── dist                | bootstrap相关文件，包括css，字体，javascript
+├── _layouts            | 网页模板文件，用于定义网页的header，footer等
+├── wiki                | 存放wiki源文件，markdown格式
+├── _posts              | 存放博客源文件，markdown格式
+├── blog.html           | 博客首页
+├── _config.yml         | jekyll配置文件
+├── index-cn.html       | 站点首页（中文）
+├── index.html          | 站点首页（英文）
+├── README.md           | 本文件
+└── wiki.html           | wiki首页
+</code></pre>
+
+<p>修改最多的就是wiki目录和posts目录下的源文件，并且都为markdown格式。在文件最开始加入了一个特定格式的头，用于jekyll生成静态网页。</p>
+
+<h2 id="section-1">直接在网页上修改</h2>
+<p>参与网站wiki，blog等的建设其实很简单。对于不熟悉git/github，或者不能够本地修改的伙伴，你也可以直接到网页上进行修改。下面以修改wiki中的setup-environment-in-windows页面为例：</p>
+
+<ul>
+  <li>找到该网页对应的markdown文件，如上节中所属，wiki源文件都存放在wiki文件夹。
+<img src="../assets/img/readme_001.png" alt="" /></li>
+  <li>点击打开该文件，并且点击右侧的Edit按钮。这时候你可以编辑修改该文件，还可以点击Preview按钮预览修改效果。
+<img src="../assets/img/readme_002.png" alt="" /></li>
+  <li>修改结束之后，请务必协商修改的记录，然后点击Save按钮保存该文件。这个时候到网站上刷新该页面，则你的修改应该已经生效。
+<img src="../assets/img/readme_003.png" alt="" /></li>
+</ul>
+
+<h2 id="section-2">将源码下载到本地</h2>
+<p>可以将该网站源码clone到本地，进行修改调试。</p>
+
+<pre><code>//将github上的源代码clone到本地
+$git clone git@github.com:Crazepony/crazepony.github.io.git
+
+//添加修改并且上传github
+$ git add .
+$ git commit -m 'xxxx'
+$ git pull --rebase
+$ git push
+
+</code></pre>
+
+<h2 id="section-3">添加新的博客</h2>
+
+<p>博客的源文件位于目录_posts下，并且使用markdown语法编写。添加一个新的博客只需要在该目录下添加一个新的markdown文件就可以，但是该文件的命名需要遵守下面的规则：</p>
+
+<blockquote>
+  <p>文件名必须以年-月-日开始，例如<code>2014-03-05-xxxx.md</code>。</p>
+</blockquote>
+
+<p>jekyll需要根据这个文件名确定生成的静态页面的位置。和wiki不同的是并不需要在根目录下的blog.html文件中添加新增加的博客列表。</p>
+
+<h2 id="section-4">参考资料</h2>
+<p>markdown语法说明：</p>
+
+<ul>
+  <li><a href="http://wowubuntu.com/markdown/basic.html">快速入门</a></li>
+  <li><a href="https://help.github.com/articles/markdown-basics">Markdown Basics</a></li>
+  <li><a href="https://help.github.com/articles/github-flavored-markdown">GitHub Flavored Markdown</a></li>
+  <li><a href="http://kramdown.gettalong.org/quickref.html">kramdown语法快速入门</a>，kramdown支持语法为markdown的超集，和标准markdown稍有不同</li>
+  <li><a href="http://kramdown.gettalong.org/syntax.html">kramdown语法详解</a>，kramdown支持语法为markdown的超集</li>
+</ul>
+
+<p>git/github入门：</p>
+
+<ul>
+  <li><a href="http://www.bootcss.com/p/git-guide/">git使用简易指南</a></li>
+  <li><a href="http://igit.linuxtoy.org/index.html">沉浸式学 Git</a></li>
+</ul>
+
+<p>windows下的git工具：</p>
+
+<ul>
+  <li><a href="https://windows.github.com/">Github for Windows</a>，windows下的github客户端，适合在windows下快速入手github。</li>
+  <li><a href="http://msysgit.github.io/">Git for Windows</a>，windows下的git工具，适合上面的windows下github客户端安装不成功（经常遇到）的情况。不过需要自己配置，也适合更加深入了解git的使用。</li>
+</ul>
+
+</div>
+
+<div class="container" id="cc">
+     <p>
+     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a>
+     全部内容以 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons 署名-非商业性使用-相同方式共享 3.0 协议发布</a>.</p>
+</div>
+
+<div class="container text-right">
+    <a href="/wiki.html" class="btn btn-primary" role="button">返回</a>
+    <a class="scrolltop btn btn-default" role="button">回到顶部</a>
+</div>
+
+
+      <!-- FOOTER -->
+    <footer class="bs-docs-footer" role="contentinfo">
+        <p>Copyright &copy;2013 Shenzhen CrazePony Technologies Co., Ltd. All rights reserved.</p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/js/doc.js"></script>
+  </body>
+</html>

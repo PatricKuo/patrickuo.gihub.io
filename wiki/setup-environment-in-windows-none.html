@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title>CrazePony Nano-copter</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/docs.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    <header class="navbar navbar-inverse navbar-static-top" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/wiki.html" class="navbar-brand">Craze维基百科</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="/wiki.html">主页</a>
+        </li>
+        <li>
+          <a href="/wiki-pov.html">CrazePOV</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/index.html" >返回Crazepony主站</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    
+<div class="wiki container">
+          <h1 id="windows-">Windows下开发环境搭建-裸机版本</h1>
+
+<p>IDE开发工具Keil v4.10下载地址：Crazepony百度云网盘<a href="http://pan.baidu.com/s/1ntNqLdv">Keil-uVision4-MDK4-12.zip</a>。</p>
+
+<p>裸机飞控源代码下载地址：Github项目<a href="https://github.com/Crazepony/crazepony-firmware-none/releases">crazepony-firmware-none</a>。</p>
+
+<h2 id="section">环境配置说明</h2>
+<p>裸机版本是指没有使用RTOS的主控固件版本。源代码对应github上的地址为。由于没有使用RTOS，所以代码更加简单明了，适合初学者使用。</p>
+
+<p>裸机版本的代码使用Keil 4进行开发编译，下面介绍编译环境的搭建和编译过程。</p>
+
+<h2 id="keil-4">Keil 4的安装和破解</h2>
+<p>由于主控使用的是ARM Cortex-M3内核的STM32，所以必须使用带有ARM编译工具链的Keil 4。网络上很多只有几十兆大小的的Keil 4可能只支持C51开发。Crazepony百度云网盘提供带有ARM编译工具链的Keil 4安装文件下载，带有破解注册机和破解说明文档。用户自行下载安装，可以看到该Keil版本为v4.10。</p>
+
+<p><img src="/assets/img/keil-version.jpg" alt="" /></p>
+
+<p>该安装文件在Windows XP，32位系统上测试通过。已知存在的问题： </p>
+
+<ul>
+  <li>不支持utf-8编码。utf-8编码的中文在Keil 4下面会显示为乱码，所以这部分固件代码没有使用utf-8编码。没有找到能够配置支持utf-8的地方，很可能是Keil版本比较老，或者破解导致无法支持utf-8编码。</li>
+</ul>
+
+<h2 id="section-1">源代码下载</h2>
+<p>主控固件裸机版本，裸机指没有使用实时操作系统RTOS。由于没有使用RTOS，所以代码更加简单明了，适合初学者使用。</p>
+
+<p>Crazepony项目是开源的，所有代码都托管在Github的<a href="https://github.com/Crazepony">Crazepony项目</a>下。裸机源代码放置在<a href="https://github.com/Crazepony/crazepony-firmware-none">crazepony-firmware-none</a>下，命名中的none表示不使用RTOS。</p>
+
+<p>可以直接使用git获得源代码，也可以从<a href="https://github.com/Crazepony/crazepony-firmware-none/releases">crazepony-firmware-none release</a>下载各个版本的裸机源代码。</p>
+
+<p><img src="/assets/img/git-download.png" alt="" /></p>
+
+<h2 id="section-2">源代码导入和编译</h2>
+<p>在源代码中，有三个文件为Keil工程文件。</p>
+
+<p><code>
+IMU_AHRS.uvopt
+IMU_AHRS.uvproj
+IMU_AHRS_IMU_AHRS.dep
+</code>
+使用上面安装的Keil 4打开文件<code>IMU_AHRS.uvproj</code>，就能够导入整个工程。如下图所示。</p>
+
+<p><img src="/assets/img/keil-build.jpg" alt="" /></p>
+
+<p>点击左上角的编译按钮，编译整个项目，在工程下生成Output目录，目录中aircraft.hex就是可以烧写到STM32的固件。参考另外一篇文章《主控固件烧写》将固件写入STM32中。</p>
+
+</div>
+
+<div class="container" id="cc">
+     <p>
+     <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="知识共享许可协议" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a>
+     全部内容以 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons 署名-非商业性使用-相同方式共享 3.0 协议发布</a>.</p>
+</div>
+
+<div class="container text-right">
+    <a href="/wiki.html" class="btn btn-primary" role="button">返回</a>
+    <a class="scrolltop btn btn-default" role="button">回到顶部</a>
+</div>
+
+
+      <!-- FOOTER -->
+    <footer class="bs-docs-footer" role="contentinfo">
+        <p>Copyright &copy;2013 Shenzhen CrazePony Technologies Co., Ltd. All rights reserved.</p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/js/doc.js"></script>
+  </body>
+</html>
